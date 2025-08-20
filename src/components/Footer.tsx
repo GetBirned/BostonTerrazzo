@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -9,13 +9,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
+            <Link to="/" className="inline-block mb-4">
               <img 
                 src="/bostonTerrazoSmall.png" 
                 alt="Boston Terrazzo Logo" 
-                className="h-12 w-auto"
+                className="h-12 w-auto spin-on-hover cursor-pointer"
               />
-            </div>
+            </Link>
             <p className="text-terrazzo-100 mb-4 max-w-md">
               Professional terrazzo restoration, polishing, and repair services across New Hampshire, 
               Maine, and eastern Massachusetts. Bringing your terrazzo floors back to life with 
@@ -75,14 +75,8 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-terrazzo-300" />
-                <a href="tel:6033932776" className="text-terrazzo-100 hover:text-terrazzo-50 transition-colors">
-                  (603) 393-2776
-                </a>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-terrazzo-300" />
-                <a href="mailto:info@bostonterrazzo.com" className="text-terrazzo-100 hover:text-terrazzo-50 transition-colors">
-                  info@bostonterrazzo.com
+                <a href="tel:6033511827" className="text-terrazzo-100 hover:text-terrazzo-50 transition-colors">
+                  (603) 351-1827
                 </a>
               </div>
               <div className="flex items-start space-x-2">

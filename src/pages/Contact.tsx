@@ -14,8 +14,20 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send this data to your backend
-    console.log('Form submitted:', formData);
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Terrazzo Inquiry from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone: ${formData.phone}\n` +
+      `Location: ${formData.location}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    const mailtoLink = `mailto:marci@marbleperfect.com?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
+    
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 3000);
     setFormData({ name: '', email: '', phone: '', location: '', message: '' });
@@ -57,26 +69,12 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Phone</h3>
-                    <a href="tel:6033932776" className="text-terrazzo-600 hover:text-terrazzo-700 text-lg">
-                      (603) 393-2776
+                    <a href="tel:6033511827" className="text-terrazzo-600 hover:text-terrazzo-700 text-lg">
+                      (603) 351-1827
                     </a>
                     <p className="text-gray-600 text-sm mt-1">Call for immediate assistance</p>
                   </div>
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-terrazzo-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-terrazzo-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-                    <a href="mailto:info@bostonterrazzo.com" className="text-terrazzo-600 hover:text-terrazzo-700">
-                      info@bostonterrazzo.com
-                    </a>
-                    <p className="text-gray-600 text-sm mt-1">We'll respond within 24 hours</p>
-                  </div>
-                </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-terrazzo-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Clock className="w-6 h-6 text-terrazzo-600" />
@@ -274,11 +272,11 @@ const Contact = () => {
             Water damage or urgent repairs? We offer emergency services for critical terrazzo restoration needs.
           </p>
           <a
-            href="tel:6033932776"
+            href="tel:6033511827"
             className="inline-flex items-center justify-center px-8 py-3 bg-white text-terrazzo-800 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-200"
           >
             <Phone className="w-5 h-5 mr-2" />
-            Call (603) 393-2776 Now
+            Call (603) 351-1827 Now
           </a>
         </div>
       </section>

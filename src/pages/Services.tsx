@@ -213,11 +213,11 @@ const Services = () => {
             restore your floors to their original beauty.
           </p>
           <a
-            href="tel:6033932776"
+            href="tel:6033511827"
             className="inline-flex items-center justify-center px-8 py-3 bg-white text-terrazzo-800 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-200"
           >
             <Phone className="w-5 h-5 mr-2" />
-            Call (603) 393-2776 Today
+            Call (603) 351-1827 Today
           </a>
         </div>
       </section>

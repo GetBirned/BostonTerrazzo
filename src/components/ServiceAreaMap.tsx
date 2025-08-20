@@ -11,6 +11,21 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
 });
 
+// Create custom terrazzo-colored marker
+const terrazzoIcon = new L.Icon({
+  iconUrl: 'data:image/svg+xml;base64,' + btoa(`
+    <svg width="25" height="41" viewBox="0 0 25 41" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#243b53" stroke="#ffffff" stroke-width="1" d="M12.5,0 C19.4,0 25,5.6 25,12.5 C25,19.4 12.5,41 12.5,41 C12.5,41 0,19.4 0,12.5 C0,5.6 5.6,0 12.5,0 Z"/>
+      <circle fill="#ffffff" cx="12.5" cy="12.5" r="4"/>
+    </svg>
+  `),
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+  shadowSize: [41, 41]
+});
+
 const ServiceAreaMap = () => {
   // Connected service area covering NH, Southern ME, and Eastern MA
   const serviceArea = [
@@ -63,12 +78,12 @@ const ServiceAreaMap = () => {
         </Polygon>
 
         {/* Company Location Marker */}
-        <Marker position={[43.4342, -71.2092]}>
+        <Marker position={[43.4342, -71.2092]} icon={terrazzoIcon}>
           <Popup>
             <div className="text-center">
               <h3 className="font-semibold text-terrazzo-700 mb-1">Boston Terrazzo</h3>
               <p className="text-sm text-gray-600">Alton, NH - Serving New England</p>
-              <p className="text-sm text-terrazzo-700 font-medium">(603) 393-2776</p>
+              <p className="text-sm text-terrazzo-700 font-medium">(603) 351-1827</p>
             </div>
           </Popup>
         </Marker>

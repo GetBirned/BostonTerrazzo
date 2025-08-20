@@ -22,11 +22,11 @@ const Home = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <a
-                  href="tel:6033932776"
+                  href="tel:6033511827"
                   className="inline-flex items-center justify-center px-6 sm:px-8 py-3 bg-terrazzo-700 text-white font-semibold rounded-lg hover:bg-terrazzo-800 transition-colors duration-200 text-sm sm:text-base"
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  Call (603) 393-2776
+                  Call (603) 351-1827
                 </a>
                 <Link
                   to="/services"
@@ -45,7 +45,6 @@ const Home = () => {
               />
               <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white p-3 sm:p-4 rounded-lg shadow-lg">
                 <div className="flex items-center space-x-2">
-                  <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-terrazzo-500" />
                   <div>
                     <p className="font-semibold text-gray-900 text-sm sm:text-base">Expert Restoration</p>
                     <p className="text-xs sm:text-sm text-gray-600">Over a Decade of Experience</p>
@@ -90,8 +89,16 @@ const Home = () => {
                 recycled glass and plastics.
               </p>
               <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
-                Properly restored terrazzo is non-porous, doesn't support microbial growth, contains no VOC 
-                materials, and is incredibly cost-effective to maintain. It's truly a "green" flooring option 
+                Properly restored terrazzo is non-porous, doesn't support microbial growth, contains no&nbsp;
+                <span 
+                  className="relative group cursor-help border-b border-dotted border-gray-400"
+                  title="Volatile Organic Compounds - chemicals that can evaporate at room temperature and potentially harm indoor air quality"
+                >
+                  VOC materials
+                  <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+                    Volatile Organic Compounds are chemicals that can evaporate and harm indoor air quality.
+                  </span>
+                </span>, and is incredibly cost-effective to maintain. It's truly a "green" flooring option 
                 that supports excellent indoor air quality.
               </p>
             </div>
@@ -186,8 +193,8 @@ const Home = () => {
               <div className="mt-6 p-4 bg-gray-100 rounded-lg">
                 <p className="text-gray-700 text-sm">
                   <strong>Not sure if we serve your area?</strong> Give us a call at{' '}
-                  <a href="tel:6033932776" className="text-terrazzo-600 hover:text-terrazzo-700">
-                    (603) 393-2776
+                  <a href="tel:6033511827" className="text-terrazzo-600 hover:text-terrazzo-700">
+                    (603) 351-1827
                   </a>{' '}
                   - we may be able to accommodate special requests!
                 </p>
@@ -198,7 +205,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 bg-terrazzo-700">
+      <section className="py-12 sm:py-16 bg-terrazzo-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Ready to Restore Your Terrazzo Floors?
@@ -209,11 +216,11 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <a
-              href="tel:6033932776"
+              href="tel:6033511827"
               className="inline-flex items-center justify-center px-6 sm:px-8 py-3 bg-white text-terrazzo-700 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-200 text-sm sm:text-base"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call (603) 393-2776
+              Call (603) 351-1827
             </a>
             <Link
               to="/contact"

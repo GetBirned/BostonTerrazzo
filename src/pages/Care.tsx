@@ -25,6 +25,16 @@ const Care = () => {
     'Steam cleaning without proper sealing'
   ];
 
+  const dosList = [
+    'Use neutral pH cleaners designed for natural stone',
+    'Clean spills immediately to prevent staining',
+    'Use soft microfiber mops and cloths',
+    'Test any new cleaner in an inconspicuous area first',
+    'Use furniture pads to prevent scratches',
+    'Maintain consistent humidity levels',
+    'Address issues promptly to prevent damage'
+  ];
+
   const professionalSigns = [
     'Loss of shine or dull appearance',
     'Visible scratches or etching',
@@ -56,7 +66,7 @@ const Care = () => {
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Terrazzo is incredibly easy and cost-effective to maintain when properly restored. Daily dust 
                 mopping and regular wet mopping with warm water or a neutral cleaner formulated for natural 
-                stone is all you need. You don't need harsh chemicals—in fact, they can damage your terrazzo.
+                stone is all you need. You don't need harsh chemicals. In many cases, they can actually damage your terrazzo.
               </p>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Properly finished terrazzo is non-porous, doesn't support microbial growth, and contains no 
@@ -113,7 +123,7 @@ const Care = () => {
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Remember though, even if you have your terrazzo sealed, a sealer will not protect against 
                   etching caused by harsh chemicals or acidic liquids. It's important to clean up spills 
-                  right away—but this is good practice regardless of your flooring type.
+                  right away. This is good practice regardless of your flooring type.
                 </p>
               </div>
               <div className="bg-terrazzo-50 p-6 rounded-lg border border-terrazzo-200">
@@ -180,14 +190,25 @@ const Care = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">What to Avoid</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Do's and Don'ts</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              These common mistakes can damage your terrazzo floors
+              Essential guidelines for proper terrazzo floor care
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-green-50 p-8 rounded-lg border border-green-200">
+              <h3 className="text-xl font-semibold text-green-900 mb-4">Do's - Safe Practices:</h3>
+              <ul className="space-y-2">
+                {dosList.map((item, index) => (
+                  <li key={index} className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                    <span className="text-green-800">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <div className="bg-red-50 p-8 rounded-lg">
-              <h3 className="text-xl font-semibold text-red-900 mb-4">Never Use These Products:</h3>
+              <h3 className="text-xl font-semibold text-red-900 mb-4">Don'ts - Never Use These:</h3>
               <ul className="space-y-2">
                 {avoidList.map((item, index) => (
                   <li key={index} className="flex items-start space-x-3">
@@ -195,27 +216,6 @@ const Care = () => {
                     <span className="text-red-800">{item}</span>
                   </li>
                 ))}
-              </ul>
-            </div>
-            <div className="bg-terrazzo-50 p-8 rounded-lg border border-terrazzo-200">
-              <h3 className="text-xl font-semibold text-terrazzo-900 mb-4">Pro Tips:</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-terrazzo-600 mt-1 flex-shrink-0" />
-                  <span className="text-terrazzo-800">Test any new cleaner in an inconspicuous area first</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-terrazzo-600 mt-1 flex-shrink-0" />
-                  <span className="text-terrazzo-800">Use furniture pads to prevent scratches</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-terrazzo-600 mt-1 flex-shrink-0" />
-                  <span className="text-terrazzo-800">Maintain consistent humidity levels</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-terrazzo-600 mt-1 flex-shrink-0" />
-                  <span className="text-terrazzo-800">Address issues promptly to prevent damage</span>
-                </li>
               </ul>
             </div>
           </div>
@@ -272,10 +272,10 @@ const Care = () => {
             to look their best for years to come.
           </p>
           <a
-            href="tel:6033932776"
+            href="tel:6033511827"
             className="inline-flex items-center justify-center px-8 py-3 bg-white text-terrazzo-800 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-200"
           >
-            Call (603) 393-2776 for Expert Care
+            Call (603) 351-1827 for Expert Care
           </a>
         </div>
       </section>
