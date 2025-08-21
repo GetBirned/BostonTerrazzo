@@ -68,7 +68,7 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <img
-                src="https://images.pexels.com/photos/6474469/pexels-photo-6474469.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="\terrazzo.jpg"
                 alt="Terrazzo floor close-up showing marble chips"
                 className="rounded-lg shadow-lg w-full"
               />

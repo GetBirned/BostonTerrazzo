@@ -193,7 +193,7 @@ const Services = () => {
             </div>
             <div>
               <img
-                src="https://images.pexels.com/photos/6474469/pexels-photo-6474469.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="\kencleaning.jpg"
                 alt="Professional terrazzo restoration work"
                 className="rounded-lg shadow-lg"
               />

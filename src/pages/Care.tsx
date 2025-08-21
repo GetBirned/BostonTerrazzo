@@ -98,7 +98,7 @@ const Care = () => {
             </div>
             <div>
               <img
-                src="https://images.pexels.com/photos/6474471/pexels-photo-6474471.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/terrazzoClean.webp"
                 alt="Beautiful terrazzo floor showing proper maintenance"
                 className="rounded-lg shadow-lg"
               />
@@ -252,7 +252,7 @@ const Care = () => {
             </div>
             <div>
               <img
-                src="https://images.pexels.com/photos/6474469/pexels-photo-6474469.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="\dirtyterrazzo.jpg"
                 alt="Professional terrazzo restoration in progress"
                 className="rounded-lg shadow-lg"
               />

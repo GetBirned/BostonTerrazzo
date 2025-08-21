@@ -7,46 +7,26 @@ const Gallery = () => {
   const projects = [
     {
       id: 1,
-      title: 'Historic Church Restoration',
-      location: 'Portsmouth, NH',
-      image: 'https://images.pexels.com/photos/6474471/pexels-photo-6474471.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Complete restoration of 100-year-old terrazzo floors in a historic church.'
+      title: 'St. Peter Parish Church',
+      location: 'Auburn, NH',
+      website: 'https://stpeteraub.org/',
+      image: '/floorAfter.jpg',
+      description: 'Restoration and polishing of century-old terrazzo floors in a historic parish, bringing back their original luster while preserving the timeless character of the church interior.'
     },
     {
       id: 2,
-      title: 'Commercial Office Building',
-      location: 'Boston, MA',
-      image: 'https://images.pexels.com/photos/6474468/pexels-photo-6474468.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Polishing and sealing of terrazzo floors in a busy commercial space.'
+      title: 'Church',
+      location: 'Dover, NH',
+      image: '/churchAfter.jpg',
+      description: 'Complete polishing and sealing of church terrazzo flooring, transforming a high-traffic sanctuary into a brilliantly reflective, durable, and easy-to-maintain surface.'
     },
     {
       id: 3,
-      title: 'Residential Home Entrance',
+      title: 'Residential Home Stairs',
       location: 'Portland, ME',
-      image: 'https://images.pexels.com/photos/6474469/pexels-photo-6474469.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Restoration of terrazzo entryway with custom color matching.'
+      image: '/stairsAfter.jpg',
+      description: 'Restoration of terrazzo stair entryway with precise color matching to seamlessly blend repairs and enhance the durability and appearance of this high-use area.'
     },
-    {
-      id: 4,
-      title: 'School Hallway Renovation',
-      location: 'Manchester, NH',
-      image: 'https://images.pexels.com/photos/6474470/pexels-photo-6474470.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Large-scale terrazzo restoration in high-traffic educational facility.'
-    },
-    {
-      id: 5,
-      title: 'Art Deco Building Lobby',
-      location: 'Cambridge, MA',
-      image: 'https://images.pexels.com/photos/6474472/pexels-photo-6474472.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Careful restoration preserving original Art Deco terrazzo patterns.'
-    },
-    {
-      id: 6,
-      title: 'Medical Facility Floors',
-      location: 'Nashua, NH',
-      image: 'https://images.pexels.com/photos/6474473/pexels-photo-6474473.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Hygienic terrazzo restoration for healthcare environment.'
-    }
   ];
 
   return (
@@ -86,7 +66,21 @@ const Gallery = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {project.website ? (
+                      <a 
+                        href={project.website} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-terrazzo-600 transition-colors duration-200"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {project.title}
+                      </a>
+                    ) : (
+                      project.title
+                    )}
+                  </h3>
                   <p className="text-terrazzo-600 font-medium mb-2">{project.location}</p>
                   <p className="text-gray-600">{project.description}</p>
                 </div>
@@ -201,7 +195,7 @@ const Gallery = () => {
                   onClick={() => setSelectedImage('/wallBefore.jpg')}
                 />
                 <p className="mt-4 text-gray-600">
-                  Stained and dull terrazzo wall surface
+                  Stained and dull terrazzo floor surface
                 </p>
               </div>
               <div className="text-center">
@@ -213,7 +207,7 @@ const Gallery = () => {
                   onClick={() => setSelectedImage('/wallAfter.jpg')}
                 />
                 <p className="mt-4 text-gray-600">
-                  Clean, vibrant terrazzo wall with restored luster
+                  Clean, vibrant terrazzo wall floor restored luster
                 </p>
               </div>
             </div>
