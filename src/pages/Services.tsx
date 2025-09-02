@@ -11,7 +11,6 @@ const Services = () => {
         'Diamond polishing system',
         'Multiple grit progression',
         'Natural shine restoration',
-        'No harsh chemicals'
       ]
     },
     {
@@ -42,7 +41,6 @@ const Services = () => {
       description: 'Complete removal of old wax buildup that yellows and dulls terrazzo surfaces.',
       features: [
         'Safe wax stripping',
-        'No harsh chemicals',
         'Complete removal',
         'Surface preparation'
       ]
@@ -116,9 +114,6 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Restoration Process</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Diamond polishing without harsh chemicals - the environmentally friendly way
-            </p>
           </div>
           
           <div className="bg-white p-8 rounded-lg shadow-lg mb-12">

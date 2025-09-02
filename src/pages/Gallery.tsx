@@ -4,28 +4,30 @@ import { X } from 'lucide-react';
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const projects = [
+  const caseStudyImages = [
     {
       id: 1,
-      title: 'St. Peter Parish Church',
-      location: 'Auburn, NH',
-      website: 'https://stpeteraub.org/',
-      image: '/floorAfter.jpg',
-      description: 'Restoration and polishing of century-old terrazzo floors in a historic parish, bringing back their original luster while preserving the timeless character of the church interior.'
+      title: 'Initial Assessment',
+      image: '/floorBefore.jpg',
+      description: 'The original terrazzo floors showing decades of wear, surface scratches, etching, and loss of original luster from heavy foot traffic and improper maintenance over the years.'
     },
     {
       id: 2,
-      title: 'Church',
-      location: 'Dover, NH',
-      image: '/churchAfter.jpg',
-      description: 'Complete polishing and sealing of church terrazzo flooring, transforming a high-traffic sanctuary into a brilliantly reflective, durable, and easy-to-maintain surface.'
+      title: 'Structural Damage',
+      image: '/broken-church-floor.jpg',
+      description: 'Areas of significant damage including cracks and chips that required specialized repair techniques to restore structural integrity.'
     },
     {
       id: 3,
-      title: 'Residential Home Stairs',
-      location: 'Portland, ME',
-      image: '/stairsAfter.jpg',
-      description: 'Restoration of terrazzo stair entryway with precise color matching to seamlessly blend repairs and enhance the durability and appearance of this high-use area.'
+      title: 'Repair Process',
+      image: '/church-fix-1.jpg',
+      description: 'Professional repair work in progress, showing our meticulous approach to matching original materials and restoring damaged sections.'
+    },
+    {
+      id: 4,
+      title: 'Final Result',
+      image: '/floorAfter.jpg',
+      description: 'The completed restoration showcasing the natural beauty and mirror-like finish achieved through our diamond polishing process.'
     },
   ];
 
@@ -35,28 +37,43 @@ const Gallery = () => {
       <section className="bg-gradient-to-br from-terrazzo-50 to-stone-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Our Work Gallery
+            Case Study: Historic Church Restoration
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See the beautiful results of our terrazzo restoration projects across New England
+            A detailed look at our comprehensive terrazzo restoration project at{' '}
+            <a 
+              href="https://stpeteraub.org/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-terrazzo-600 hover:text-terrazzo-700 font-semibold underline transition-colors duration-200"
+            >
+              St. Peter Parish Church
+            </a>
+            {' '}in Auburn, New Hampshire
           </p>
         </div>
       </section>
 
-      {/* Gallery Grid */}
+      {/* Case Study Grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Restoration Process</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Follow the complete transformation of this historic church's terrazzo floors
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {caseStudyImages.map((image) => (
               <div
-                key={project.id}
+                key={image.id}
                 className="group cursor-pointer"
-                onClick={() => setSelectedImage(project.image)}
+                onClick={() => setSelectedImage(image.image)}
               >
                 <div className="relative overflow-hidden rounded-lg shadow-lg">
                   <img
-                    src={project.image}
-                    alt={project.title}
+                    src={image.image}
+                    alt={image.title}
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
@@ -66,26 +83,34 @@ const Gallery = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {project.website ? (
-                      <a 
-                        href={project.website} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="hover:text-terrazzo-600 transition-colors duration-200"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        {project.title}
-                      </a>
-                    ) : (
-                      project.title
-                    )}
-                  </h3>
-                  <p className="text-terrazzo-600 font-medium mb-2">{project.location}</p>
-                  <p className="text-gray-600">{project.description}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{image.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{image.description}</p>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Project Details */}
+      <section className="py-16 bg-terrazzo-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Project Overview</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">The Challenge</h3>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  This historic church's terrazzo floors had endured decades of heavy foot traffic, improper cleaning methods, and general wear. The original beauty was hidden beneath years of accumulated damage, requiring a comprehensive restoration approach.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Our Solution</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Using our specialized diamond polishing process and expert repair techniques, we restored these floors to their original glory while preserving their historic character. The result is a durable, beautiful surface that will serve the congregation for generations to come.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -128,34 +153,6 @@ const Gallery = () => {
               </div>
             </div>
 
-            {/* Floor Restoration */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="text-center">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Before Restoration</h3>
-                <img
-                  src="/floorBefore.jpg"
-                  alt="Terrazzo floor before restoration - scratched and dull"
-                  className="rounded-lg shadow-lg w-full cursor-pointer"
-                  onClick={() => setSelectedImage('/floorBefore.jpg')}
-                />
-                <p className="mt-4 text-gray-600">
-                  Scratched and dull terrazzo floor with visible wear patterns
-                </p>
-              </div>
-              <div className="text-center">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">After Restoration</h3>
-                <img
-                  src="/floorAfter.jpg"
-                  alt="Terrazzo floor after restoration - polished and gleaming"
-                  className="rounded-lg shadow-lg w-full cursor-pointer"
-                  onClick={() => setSelectedImage('/floorAfter.jpg')}
-                />
-                <p className="mt-4 text-gray-600">
-                  Polished to perfection with a mirror-like finish
-                </p>
-              </div>
-            </div>
-
             {/* Stairs Restoration */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="text-center">
@@ -180,34 +177,6 @@ const Gallery = () => {
                 />
                 <p className="mt-4 text-gray-600">
                   Smooth, polished stairs ready for years of use
-                </p>
-              </div>
-            </div>
-
-            {/* Wall Restoration */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="text-center">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Before Restoration</h3>
-                <img
-                  src="/wallBefore.jpg"
-                  alt="Terrazzo wall before restoration - stained and dull"
-                  className="rounded-lg shadow-lg w-full cursor-pointer"
-                  onClick={() => setSelectedImage('/wallBefore.jpg')}
-                />
-                <p className="mt-4 text-gray-600">
-                  Stained and dull terrazzo floor surface
-                </p>
-              </div>
-              <div className="text-center">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">After Restoration</h3>
-                <img
-                  src="/wallAfter.jpg"
-                  alt="Terrazzo wall after restoration - clean and vibrant"
-                  className="rounded-lg shadow-lg w-full cursor-pointer"
-                  onClick={() => setSelectedImage('/wallAfter.jpg')}
-                />
-                <p className="mt-4 text-gray-600">
-                  Clean, vibrant terrazzo wall floor restored luster
                 </p>
               </div>
             </div>
