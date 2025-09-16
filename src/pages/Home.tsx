@@ -39,7 +39,7 @@ const Home = () => {
             </div>
             <div className="relative">
               <img
-                src="\wallAfter.jpg"
+                src="\churchPretty.jpg"
                 alt="Beautiful restored terrazzo floor"
                 className="rounded-lg shadow-2xl w-full"
               />

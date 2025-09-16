@@ -188,7 +188,7 @@ const Services = () => {
             </div>
             <div>
               <img
-                src="\kencleaning.jpg"
+                src="\churchOpening.jpg"
                 alt="Professional terrazzo restoration work"
                 className="rounded-lg shadow-lg"
               />
